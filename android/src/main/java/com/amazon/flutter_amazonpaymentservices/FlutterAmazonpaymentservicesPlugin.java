@@ -137,7 +137,7 @@ public class FlutterAmazonpaymentservicesPlugin implements FlutterPlugin, Method
             fortRequest.setRequestMap(requestParamMap);
 
             if (fortCallback == null) {
-                fortCallback = FortCallback.Factory.create();
+                fortCallback = FortCallBackManager.Factory.create();
             }
 
             FortSdk.getInstance().registerCallback(activity, fortRequest, mEnvironment.getSdkEnvironemt(), PAYFORT_REQUEST_CODE, fortCallback, true, new FortInterfaces.OnTnxProcessed() {
